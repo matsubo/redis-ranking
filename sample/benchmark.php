@@ -35,14 +35,25 @@ $bench->end();
 echo sprintf("Update: %s qps\n" , number_format(round($users / ($bench->getTime(true) / 1000))));
 
 
-// get
+// get score
 $bench = new Ubench;
 $bench->start();
 for ($i = 0; $i < $users; $i++ ) {
     $ranking->getScore($i);
 }
 $bench->end();
-echo sprintf("Get: %s qps\n" , number_format(round($users / ($bench->getTime(true) / 1000))));
+echo sprintf("Get score: %s qps\n" , number_format(round($users / ($bench->getTime(true) / 1000))));
+
+
+// get rank
+$bench = new Ubench;
+$bench->start();
+for ($i = 0; $i < $users; $i++ ) {
+    $ranking->getRank($i);
+}
+$bench->end();
+echo sprintf("Get rank: %s qps\n" , number_format(round($users / ($bench->getTime(true) / 1000))));
+
 
 
 
