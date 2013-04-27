@@ -1,0 +1,25 @@
+{
+    "name": "redis/ranking",
+    "description": "Wrapping Redis's sorted set APIs for specializing ranking operations.",
+    "keywords": ["redis", "ranking", "sort", "realtime"],
+    "homepage": "https://github.com/matsubo/redis-ranking",
+    "type": "library",
+    "license": "PHP3",
+    "authors": [
+    {
+        "name": "Yuki Matsukura",
+        "email": "matsubokkuri@gmail.com"
+    }
+    ],
+
+
+        "require": {
+        },
+        "require-dev": {
+            "devster/ubench": "1.1.*-dev"
+                "phpunit/phpunit": "3.*"
+        },
+        "autoload": {
+            "psr-0": {"Matsubo": "src/"}
+        }
+}
