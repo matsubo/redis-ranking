@@ -26,6 +26,7 @@ class RankingTest extends \PHPUnit_Framework_TestCase
             array('momoka',    100), // 3
             array('akari',      50), // 1
             array('ayaka',    1000), // 4
+            array('shiori',   1001), // 5
         );
 
         return $data;
@@ -83,7 +84,7 @@ class RankingTest extends \PHPUnit_Framework_TestCase
     public function testSize()
     {
         $size = $this->ranking->countUsers();
-        $this->assertEquals(5, $size);
+        $this->assertEquals(6, $size);
     }
     /**
      * @depends testUserScore1
@@ -133,7 +134,7 @@ class RankingTest extends \PHPUnit_Framework_TestCase
     public function testDeleteAllUser()
     {
         $deleted_user_id = $this->ranking->deleteAllUser();
-        $this->assertEquals(5, count($deleted_user_id));
+        $this->assertEquals(6, count($deleted_user_id));
     }
     public function tearDown()
     {
