@@ -8,11 +8,11 @@ Abstracting Redis's `Sorted Set` APIs to use as a real-time ranking system.
 Requirements
 -----------------------------
 - Redis
-  - 2.4=<
+  - >=2.4
 - PhpRedis
   - https://github.com/matsubo/phpredis
 - PHP
-  - 5.3=<
+  - >=5.3
 - Composer
 
 Benchmark sample
