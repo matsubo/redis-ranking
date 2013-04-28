@@ -28,6 +28,7 @@ Installation
 {
     "require": {
        "redis/ranking": "1.0.*"
+    }
 }
 ```
 
