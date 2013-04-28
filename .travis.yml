@@ -4,3 +4,5 @@ php:
   - 5.3
 services:
   - redis-server
+before_script:
+  - php composer.phar install
