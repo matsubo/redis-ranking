@@ -1,7 +1,7 @@
-Ranking API for Redis
+Ranking API for Redis ![project status](http://stillmaintained.com/matsubo/redis-ranking.png) [![Build Status](https://travis-ci.org/matsubo/redis-ranking.png?branch=master)](https://travis-ci.org/matsubo/redis-ranking)
 =============================
 
-[![Build Status](https://travis-ci.org/matsubo/redis-ranking.png?branch=master)](https://travis-ci.org/matsubo/redis-ranking)
+
 
 Abstract
 -----------------------------
