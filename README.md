@@ -15,6 +15,20 @@ Requirements
   - >=5.3
 - Composer
 
+
+
+Installation
+----------------------------
+
+* Using composer
+
+```
+{
+    "require": {
+       "redis/ranking": "1.0.*"
+}
+```
+
 Benchmark sample
 -----------------------------
 ```
@@ -26,19 +40,7 @@ php sample/benchmark.php  1.16s user 2.18s system 44% cpu 7.551 total
 ```
 
 
-Installation
-----------------------------
-
-Using composer.
-```
-{
-    "require": {
-       "redis/ranking": "1.0.*"
-}
-```
-
-
-How to run unittest
+How to run unit test
 ----------------------------
 ```
 % cp phpunit.xml.dist  phpunit.xml
