@@ -41,7 +41,7 @@ class Ranking
      * @param int $user_id
      * @param int $score
      * @access public
-     * @return void
+     * @return int
      */
     public function setUserScore($user_id, $score)
     {
@@ -52,7 +52,7 @@ class Ranking
      *
      * @param int $user_id
      * @access public
-     * @return void
+     * @return int
      */
     public function getScore($user_id)
     {
@@ -63,7 +63,7 @@ class Ranking
      *
      * @param int $user_id
      * @access public
-     * @return void
+     * @return int
      */
     public function getRank($user_id)
     {
@@ -75,7 +75,7 @@ class Ranking
      * @param int $user_id
      * @param int $score_diff
      * @access public
-     * @return void
+     * @return int
      */
     public function incrementScore($user_id, $score_diff)
     {
@@ -88,7 +88,7 @@ class Ranking
      * @param int $end
      * @param bool $withscores
      * @access public
-     * @return void
+     * @return array
      */
     public function getRange($start = 0, $end = -1, $withscores = false)
     {
@@ -101,7 +101,7 @@ class Ranking
      * @param int $end
      * @param bool $withscores
      * @access public
-     * @return void
+     * @return array
      */
     public function getRevRange($start = 0, $end = -1, $withscores = false)
     {
@@ -116,7 +116,7 @@ class Ranking
      * @param int $offset
      * @param int $count
      * @access public
-     * @return void
+     * @return array
      */
     public function getRangeByScores($start = 0, $end = -1, $withscores = false, $offset = null, $count = null)
     {
@@ -133,7 +133,7 @@ class Ranking
      *
      * @param int $user_id
      * @access public
-     * @return void
+     * @return int
      */
     public function deleteUser($user_id)
     {
@@ -143,7 +143,7 @@ class Ranking
      * deleteAllUser
      *
      * @access public
-     * @return void
+     * @return array
      */
     public function deleteAllUser()
     {
@@ -158,7 +158,7 @@ class Ranking
      * countUsers
      *
      * @access public
-     * @return void
+     * @return int
      */
     public function countUsers()
     {

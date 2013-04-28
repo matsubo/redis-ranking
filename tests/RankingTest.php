@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ALL);
 require __DIR__ . '/../vendor/autoload.php';
 /**
  * RankingTest
@@ -91,16 +92,16 @@ class RankingTest extends \PHPUnit_Framework_TestCase
      */
     public function testRange()
     {
-        $hash = $this->ranking->getRange($start = 2, $end = 1, $withscores = true);
-        $this->assertEquals(abs($end) + 1, count($hash));
+        $hash = $this->ranking->getRange($start = 2, $end = 4, $withscores = true);
+        $this->assertEquals(abs($end - $start) + 1, count($hash));
     }
      /**
      * @depends testUserScore1
      */
     public function testRevRange()
     {
-        $hash = $this->ranking->getRevRange($start = 2, $end = 1, $withscores = true);
-        $this->assertEquals(abs($end) + 1, count($hash));
+        $hash = $this->ranking->getRevRange($start = 2, $end = 4, $withscores = true);
+        $this->assertEquals(abs($end - $start) + 1, count($hash));
     }
      /**
      * @depends testUserScore1
@@ -112,7 +113,7 @@ class RankingTest extends \PHPUnit_Framework_TestCase
     }
     /**
      * @dataProvider userProvider
-     * @depends testSize
+     * @depends testRangeByScores
      */
     public function testDelete($user_id, $score)
     {
