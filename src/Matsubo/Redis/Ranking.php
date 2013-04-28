@@ -92,7 +92,7 @@ class Ranking
      */
     public function getRange($start = 0, $end = -1, $withscores = false)
     {
-        return $this->redis->zRange($this->namespace, $strt, $end, $withscores);
+        return $this->redis->zRange($this->namespace, $start, $end, $withscores);
     }
     /**
      * getRevRange
@@ -105,7 +105,7 @@ class Ranking
      */
     public function getRevRange($start = 0, $end = -1, $withscores = false)
     {
-        return $this->redis->zRevRange($this->namespace, $strt, $end, $withscores);
+        return $this->redis->zRevRange($this->namespace, $start, $end, $withscores);
     }
     /**
      * getRangeByScores
