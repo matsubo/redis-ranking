@@ -5,4 +5,6 @@ php:
 services:
   - redis-server
 before_script:
+  - wget http://getcomposer.org/composer.phar
   - php composer.phar install
+  - phpunit
