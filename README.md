@@ -1,6 +1,8 @@
 Ranking API for Redis
 =============================
 
+[![Build Status](https://travis-ci.org/matsubo/redis-ranking.png?branch=master)](https://travis-ci.org/matsubo/redis-ranking)
+
 Abstract
 -----------------------------
 Abstracting Redis's `Sorted Set` APIs to use as a real-time ranking system.
@@ -64,6 +66,15 @@ TODO
 - Implement `zUnion` API as a static helper API.
 - Associate with travis.
 - throws exception if return value from Redis class invalid.
+
+
+History
+----------------------------
+- 1.0.1
+  - bugfix: correct variable name.
+  - supports travis CI and passed test.
+- 1.0.0
+  - Published
 
 
 
