@@ -21,7 +21,8 @@ for ($i = 0; $i < $users; $i++ ) {
     $result = $ranking->setUserScore($i, -mt_rand(1, 10000));
 }
 $bench->end();
-echo sprintf("Add: %s qps\n" , number_format(round($users / ($bench->getTime(true) / 1000))));
+
+echo sprintf("Add: %s queries/s\n" , number_format(round($users / ($bench->getTime(true)))));
 
 
 
@@ -32,7 +33,7 @@ for ($i = 0; $i < $users; $i++ ) {
     $result = $ranking->setUserScore($i, -mt_rand(1, 10000));
 }
 $bench->end();
-echo sprintf("Update: %s qps\n" , number_format(round($users / ($bench->getTime(true) / 1000))));
+echo sprintf("Update: %s queries/s\n" , number_format(round($users / ($bench->getTime(true)))));
 
 
 // get score
@@ -42,7 +43,7 @@ for ($i = 0; $i < $users; $i++ ) {
     $ranking->getScore($i);
 }
 $bench->end();
-echo sprintf("Get score: %s qps\n" , number_format(round($users / ($bench->getTime(true) / 1000))));
+echo sprintf("Get score: %s queries/s\n" , number_format(round($users / ($bench->getTime(true)))));
 
 
 // get rank
@@ -52,7 +53,7 @@ for ($i = 0; $i < $users; $i++ ) {
     $ranking->getRank($i);
 }
 $bench->end();
-echo sprintf("Get rank: %s qps\n" , number_format(round($users / ($bench->getTime(true) / 1000))));
+echo sprintf("Get rank: %s queries/s\n" , number_format(round($users / ($bench->getTime(true)))));
 
 
 
