@@ -23,10 +23,11 @@ class Ranking
      * __construct
      *
      * @access public
+     * @param string $namespace
      * @param mixed Redis(optional)
      * @return void
      */
-    public function __construct($namespace = '', $redis = null)
+    public function __construct($namespace, $redis = null)
     {
         if (!$redis) {
             $redis = new \Redis();
