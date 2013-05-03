@@ -13,4 +13,6 @@ before_install:
 before_script:
   - wget http://getcomposer.org/composer.phar
   - php composer.phar install
+script:
   - phpunit
+  - php coverage-checker.php clover.xml 90
