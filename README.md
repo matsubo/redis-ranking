@@ -1,16 +1,8 @@
 Ranking API for Redis 
 =============================
+[![Coverage Status](https://coveralls.io/repos/matsubo/redis-ranking/badge.png?branch=master)](https://coveralls.io/r/matsubo/redis-ranking) [![Build Status](https://travis-ci.org/matsubo/redis-ranking.png?branch=master)](https://travis-ci.org/matsubo/redis-ranking)
 
-
-
-Abstract
------------------------------
 Abstracting Redis's `Sorted Set` APIs to use as a real-time ranking system.
-
-* ![project status](http://stillmaintained.com/matsubo/redis-ranking.png) 
-* [![Build Status](https://travis-ci.org/matsubo/redis-ranking.png?branch=master)](https://travis-ci.org/matsubo/redis-ranking)
-* Code coverage
-  * 100%
 
 Requirements
 -----------------------------
