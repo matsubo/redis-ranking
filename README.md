@@ -29,14 +29,22 @@ Installation
 }
 ```
 
+```
+# install
+$ php composer.phar install --dev
+# update
+$ php composer.phar update redis/ranking --dev
+```
+
 Benchmark sample
 -----------------------------
 ```
-% time php sample/benchmark.php
-Add: 20,029,757 qps
-Update: 18,569,067 qps
-Get: 21,912,140 qps
-php sample/benchmark.php  1.16s user 2.18s system 44% cpu 7.551 total
+% php sample/benchmark.php
+Add: 18,350 queries/s
+Update: 17,876 queries/s
+Get score: 21,361 queries/s
+Get rank: 22,123 queries/s
+php sample/benchmark.php  1.50s user 2.96s system 43% cpu 10.203 total
 ```
 
 

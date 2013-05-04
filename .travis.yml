@@ -13,7 +13,7 @@ before_install:
   - echo "extension=redis.so" > redis.ini && phpenv config-add redis.ini
 before_script:
   - wget http://getcomposer.org/composer.phar
-  - php composer.phar install
+  - php composer.phar install --dev --no-interaction
 script:
   - mkdir -p build/logs
   - php vendor/bin/phpunit -c phpunit.xml.dist
