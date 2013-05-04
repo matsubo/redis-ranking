@@ -17,10 +17,11 @@
 
 
     "require": {
+        "php": ">=5.3"
     },
     "require-dev": {
         "devster/ubench": "1.1.*-dev",
-        "phpunit/phpunit": "3.*",
+        "phpunit/phpunit": "3.7.*@stable",
         "satooshi/php-coveralls": "dev-master"
     },
     "autoload": {
