@@ -1,7 +1,7 @@
 {
     "name": "redis/ranking",
     "description": "Wrapping Redis's sorted set APIs for specializing ranking operations.",
-    "keywords": ["redis", "ranking", "sort", "realtime"],
+    "keywords": ["redis", "ranking", "sorted set", "realtime", "Social Game"],
     "homepage": "https://github.com/matsubo/redis-ranking",
     "type": "library",
     "license": "PHP3",
@@ -11,7 +11,8 @@
     "authors": [
     {
         "name": "Yuki Matsukura",
-        "email": "matsubokkuri@gmail.com"
+        "email": "matsubokkuri@gmail.com",
+        "homepage": "http://matsu.teraren.com/blog/"
     }
     ],
 
