@@ -74,6 +74,8 @@ TODO
 - Implement `zUnion` API as a static helper API.
 - Associate with travis.
 - throws exception if return value from Redis class invalid.
+- PSR-3 support
+  - https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-3-logger-interface.md
 
 
 History
