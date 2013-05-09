@@ -10,8 +10,8 @@ Requirements
 -----------------------------
 - Redis
   - >=2.4
-- PhpRedis
-  - https://github.com/matsubo/phpredis
+- PhpRedis extension
+  - https://github.com/nicolasff/phpredis
 - PHP
   - >=5.3
 - Composer
@@ -32,9 +32,6 @@ Installation
 ```
 
 ```
-# install
-$ php composer.phar install --dev
-# update
 $ php composer.phar update redis/ranking --dev
 ```
 
@@ -52,13 +49,8 @@ php sample/benchmark.php  1.50s user 2.96s system 43% cpu 10.203 total
 
 How to run unit test
 ----------------------------
-```
-% cp phpunit.xml.dist  phpunit.xml
-% vendor/bin/phpunit
-```
-or
 
-Run with default.
+Run with default setting.
 ```
 % vendor/bin/phpunit -c phpunit.xml.dist
 ```
@@ -72,11 +64,6 @@ TODO
   - `zRemRangeByRank`, zDeleteRangeByRank - Remove all members in a sorted set within the given indexes
   - `zRemRangeByScore`, zDeleteRangeByScore - Remove all members in a sorted set within the given scores
 - Implement `zUnion` API as a static helper API.
-- Associate with travis.
-- throws exception if return value from Redis class invalid.
-- PSR-3 support
-  - https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-3-logger-interface.md
-
 
 History
 ----------------------------
