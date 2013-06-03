@@ -23,7 +23,9 @@
     "require-dev": {
         "devster/ubench": "1.1.*-dev",
         "phpunit/phpunit": "3.7.*@stable",
-        "satooshi/php-coveralls": "dev-master"
+        "satooshi/php-coveralls": "dev-master",
+        "fabpot/php-cs-fixer": "0.3.*@dev",
+        "sebastian/diff": "1.0.*@dev"
     },
     "autoload": {
         "psr-0": {"Matsubo": "src/"}

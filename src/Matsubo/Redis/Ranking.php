@@ -85,8 +85,8 @@ class Ranking
     /**
      * getRange
      *
-     * @param int $start
-     * @param int $end
+     * @param int  $start
+     * @param int  $end
      * @param bool $withscores
      * @access public
      * @return array
@@ -98,8 +98,8 @@ class Ranking
     /**
      * getRevRange
      *
-     * @param int $start
-     * @param int $end
+     * @param int  $start
+     * @param int  $end
      * @param bool $withscores
      * @access public
      * @return array
@@ -111,11 +111,11 @@ class Ranking
     /**
      * getRangeByScores
      *
-     * @param int $start
-     * @param int $end
+     * @param int  $start
+     * @param int  $end
      * @param bool $withscores
-     * @param int $offset
-     * @param int $count
+     * @param int  $offset
+     * @param int  $count
      * @access public
      * @return array
      */
@@ -153,6 +153,7 @@ class Ranking
             $this->redis->zDelete($this->namespace, $user_id);
             $deleted_user_id[] = $user_id;
         }
+
         return $deleted_user_id;
     }
     /**
@@ -166,5 +167,3 @@ class Ranking
         return $this->redis->zSize($this->namespace);
     }
 }
-
-
