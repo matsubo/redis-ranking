@@ -88,6 +88,6 @@ It is released under the [PHP License, version 3.01](http://www.php.net/license/
 Copyright
 -----------------------------
 - Yuki Matsukura
-  - http://matsu.teraren.com/
+  - http://matsu.teraren.com/blog/
 
 
