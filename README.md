@@ -1,8 +1,14 @@
 Ranking API for Redis 
 =============================
+
 [![Coverage Status](https://coveralls.io/repos/matsubo/redis-ranking/badge.png?branch=master)](https://coveralls.io/r/matsubo/redis-ranking)
 [![Build Status](https://travis-ci.org/matsubo/redis-ranking.png?branch=master)](https://travis-ci.org/matsubo/redis-ranking)
 [![Dependencies Status](https://d2xishtp1ojlk0.cloudfront.net/d/9721341)](http://depending.in/matsubo/redis-ranking)
+
+[![Stable Version](https://poser.pugx.org/redis/ranking/v/stable.png)](https://packagist.org/packages/redis/ranking)
+[![Download Count](https://poser.pugx.org/redis/ranking/downloads.png)](https://packagist.org/packages/redis/ranking)
+
+
 [![endorse](https://api.coderwall.com/matsubo/endorsecount.png)](https://coderwall.com/matsubo)
   
 Abstracting Redis's `Sorted Set` APIs to use as a real-time ranking system.
