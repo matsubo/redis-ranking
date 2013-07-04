@@ -91,3 +91,7 @@ Copyright
   - http://matsu.teraren.com/blog/
 
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/matsubo/redis-ranking/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
