@@ -15,11 +15,6 @@
         "homepage": "http://matsu.teraren.com/blog/"
     }
     ],
-
-
-    "require": {
-        "php": ">=5.3"
-    },
     "require-dev": {
         "devster/ubench": "1.1.*-dev",
         "phpunit/phpunit": "3.7.*@stable",
