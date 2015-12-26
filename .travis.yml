@@ -8,10 +8,7 @@ php:
 services:
   - redis-server
 before_install:
-  # install phpredis extension.
-  - git clone --depth=50 https://github.com/nicolasff/phpredis
-  - sh -c "cd phpredis && phpize && ./configure && make && sudo make install"
-  - echo "extension=redis.so" > redis.ini && phpenv config-add redis.ini
+  - ./.travis_redis.sh
 before_script:
   - wget http://getcomposer.org/composer.phar
   - php composer.phar install --dev --no-interaction
