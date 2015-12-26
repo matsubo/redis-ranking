@@ -77,7 +77,7 @@ History
   - Refactoring
   - Support PHP 7.0
   - Library update
-  - Removed PHP5.3 compatibility
+  - Removed PHP5.3 and PHP5.4 compatibility
 - 1.0.1
   - bugfix: correct variable name.
   - supports travis CI and passed test.
