@@ -19,7 +19,7 @@ Requirements
 - PhpRedis extension
   - https://github.com/nicolasff/phpredis
 - PHP
-  - >=5.3
+  - >=5.3, >=5.4, >=5.5 >=5.6, >=7.0
 - Composer
 
 
@@ -73,6 +73,10 @@ TODO
 
 History
 ----------------------------
+- Next Release
+  - Refactoring
+  - Support PHP 7.0
+  - Library update
 - 1.0.1
   - bugfix: correct variable name.
   - supports travis CI and passed test.
