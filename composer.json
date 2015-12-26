@@ -6,7 +6,7 @@
     "type": "library",
     "license": "PHP3",
     "require" : {
-        "php": ">=5.3.0"
+        "php": ">=5.5.0"
     },
     "authors": [
     {
@@ -16,7 +16,7 @@
     }
     ],
     "require-dev": {
-        "devster/ubench": "1.1.*-dev",
+        "devster/ubench": "dev-master",
         "phpunit/phpunit": "3.7.*@stable",
         "satooshi/php-coveralls": "dev-master",
         "fabpot/php-cs-fixer": "0.3.*@dev",
