@@ -4,7 +4,7 @@
 set -e
 
 
-git clone --depth=50 https://github.com/nicolasff/phpredis
+git clone --depth=50 https://github.com/phpredis/phpredis
 cd phpredis 
 
 major_version=`php -v | head -n 1 | cut -c 5`
@@ -13,7 +13,6 @@ then
   git checkout php7
 fi
 
-exit;
 phpize
 ./configure
 make
