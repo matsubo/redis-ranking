@@ -4,8 +4,8 @@
 set -e
 
 
-git clone --depth=50 https://github.com/phpredis/phpredis
-cd phpredis 
+git clone  https://github.com/phpredis/phpredis
+cd phpredis
 
 major_version=`php -v | head -n 1 | cut -c 5`
 if [ $major_version == "7" ]

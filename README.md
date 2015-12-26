@@ -19,7 +19,7 @@ Requirements
 - PhpRedis extension
   - https://github.com/nicolasff/phpredis
 - PHP
-  - >=5.3, >=5.4, >=5.5 >=5.6, >=7.0
+  - >=5.4, >=5.5 >=5.6, >=7.0
 - Composer
 
 
@@ -61,7 +61,7 @@ Run with default setting.
 % vendor/bin/phpunit -c phpunit.xml.dist
 ```
 
-Currently tested with PHP 5.3.15 + Redis 2.6.12.
+Currently tested with PHP 7.0.0 + Redis 2.6.12.
 
 
 TODO
@@ -77,6 +77,7 @@ History
   - Refactoring
   - Support PHP 7.0
   - Library update
+  - Removed PHP5.3 compatibility
 - 1.0.1
   - bugfix: correct variable name.
   - supports travis CI and passed test.
