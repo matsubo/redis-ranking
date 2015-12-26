@@ -10,7 +10,7 @@ cd phpredis
 major_version=`php -v | head -n 1 | cut -c 5`
 if [ $major_version == "7" ]
 then
-  git checkout remotes/origin/php7
+  git checkout origin/php7
 fi
 
 phpize
