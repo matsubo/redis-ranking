@@ -3,7 +3,6 @@ Ranking API for Redis
 
 [![Coverage Status](https://coveralls.io/repos/matsubo/redis-ranking/badge.png?branch=master)](https://coveralls.io/r/matsubo/redis-ranking)
 [![Build Status](https://travis-ci.org/matsubo/redis-ranking.png?branch=master)](https://travis-ci.org/matsubo/redis-ranking)
-[![Dependencies Status](https://depending.in/matsubo/redis-ranking.png)](http://depending.in/matsubo/redis-ranking)
 [![Stable Version](https://poser.pugx.org/redis/ranking/v/stable.png)](https://packagist.org/packages/redis/ranking)
 [![Download Count](https://poser.pugx.org/redis/ranking/downloads.png)](https://packagist.org/packages/redis/ranking)
 
@@ -19,7 +18,7 @@ Requirements
 - PhpRedis extension
   - https://github.com/nicolasff/phpredis
 - PHP
-  - >=5.4, >=5.5 >=5.6, >=7.0
+  - >=5.5 >=5.6, >=7.0
 - Composer
 
 
@@ -73,9 +72,9 @@ TODO
 
 History
 ----------------------------
-- Next Release
-  - Refactoring
-  - Support PHP 7.0
+- 1.1.0
+  - Code Refactoring
+  - Added PHP 7.0 support
   - Library update
   - Removed PHP5.3 and PHP5.4 compatibility
 - 1.0.1
