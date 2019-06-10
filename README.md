@@ -7,18 +7,15 @@ Ranking API for Redis
 [![Download Count](https://poser.pugx.org/redis/ranking/downloads.png)](https://packagist.org/packages/redis/ranking)
 
 
-[![endorse](https://api.coderwall.com/matsubo/endorsecount.png)](https://coderwall.com/matsubo)
-  
-Abstracting Redis's `Sorted Set` APIs to use as a real-time ranking system.
 
 Requirements
 -----------------------------
 - Redis
-  - >=2.4
+  - `>=2.4`
 - PhpRedis extension
   - https://github.com/nicolasff/phpredis
 - PHP
-  - >=5.5 >=5.6, >=7.0
+  - `>=5.5 >=5.6, >=7.0`
 - Composer
 
 
@@ -92,10 +89,6 @@ It is released under the [PHP License, version 3.01](http://www.php.net/license/
 Copyright
 -----------------------------
 - Yuki Matsukura
-  - http://matsu.teraren.com/blog/
+  - https://matsu.teraren.com/blog/
 
-
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/matsubo/redis-ranking/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
