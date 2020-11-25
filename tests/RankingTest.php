@@ -9,7 +9,7 @@ require __DIR__ . '/../vendor/autoload.php';
  * @license PHP Version 3.0 {@link http://www.php.net/license/3_0.txt}
  */
 use Matsubo\Redis\Ranking;
-class RankingTest extends \PHPUnit_Framework_TestCase
+class RankingTest extends \PHPUnit\Framework\TestCase
 {
     private $ranking;
 
@@ -38,7 +38,7 @@ class RankingTest extends \PHPUnit_Framework_TestCase
      * @access public
      * @return void
      */
-    public function setUp()
+    public function setUp(): void
     {
         $this->ranking = new Ranking;
     }
@@ -135,7 +135,7 @@ class RankingTest extends \PHPUnit_Framework_TestCase
         $deleted_user_id = $this->ranking->deleteAllUser();
         $this->assertEquals(6, count($deleted_user_id));
     }
-    public function tearDown()
+    public function tearDown(): void
     {
     }
 }

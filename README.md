@@ -34,7 +34,7 @@ Installation
 ```
 
 ```
-$ php composer.phar update redis/ranking --dev
+$ composer update redis/ranking --dev
 ```
 
 Benchmark sample
