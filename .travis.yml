@@ -16,4 +16,4 @@ script:
   - php coverage-checker.php build/logs/clover.xml 100
 
 after_script:
-  - php vendor/bin/coveralls -v
+  - php vendor/bin/php-coveralls -v
