@@ -57,7 +57,7 @@ Run with default setting.
 % vendor/bin/phpunit -c phpunit.xml.dist
 ```
 
-Currently tested with PHP 7.0.0 + Redis 2.6.12.
+Currently tested with PHP 7.4.5 + Redis 5.0.7.
 
 
 TODO
