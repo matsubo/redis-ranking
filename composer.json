@@ -19,8 +19,8 @@
         "devster/ubench": "dev-master",
         "phpunit/phpunit": "^9",
         "php-coveralls/php-coveralls": "^2.4",
-        "phpunit/phpcov": "^8.0",
-        "friendsofphp/php-cs-fixer": "^2.16"
+        "friendsofphp/php-cs-fixer": "^2.16",
+        "phpunit/php-code-coverage": "^9.2"
     },
     "autoload": {
         "psr-0": {"Matsubo": "src/"}
