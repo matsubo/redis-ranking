@@ -2,7 +2,6 @@ Ranking API for Redis
 =============================
 
 [![Coverage Status](https://coveralls.io/repos/matsubo/redis-ranking/badge.png?branch=master)](https://coveralls.io/r/matsubo/redis-ranking)
-[![Build Status](https://travis-ci.org/matsubo/redis-ranking.png?branch=master)](https://travis-ci.org/matsubo/redis-ranking)
 [![Stable Version](https://poser.pugx.org/redis/ranking/v/stable.png)](https://packagist.org/packages/redis/ranking)
 [![Download Count](https://poser.pugx.org/redis/ranking/downloads.png)](https://packagist.org/packages/redis/ranking)
 
@@ -34,7 +33,7 @@ Installation
 ```
 
 ```
-$ php composer.phar update redis/ranking --dev
+$ composer update redis/ranking --dev
 ```
 
 Benchmark sample
@@ -57,7 +56,7 @@ Run with default setting.
 % vendor/bin/phpunit -c phpunit.xml.dist
 ```
 
-Currently tested with PHP 7.0.0 + Redis 2.6.12.
+Currently tested with PHP 7.4.5 + Redis 5.0.7.
 
 
 TODO
@@ -69,6 +68,8 @@ TODO
 
 History
 ----------------------------
+- 1.2.0
+  - Updated dev tools
 - 1.1.0
   - Code Refactoring
   - Added PHP 7.0 support

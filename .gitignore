@@ -1,4 +1,6 @@
-vendor
-composer.phar
-clover.xml
-build
+/vendor
+/composer.phar
+/clover.xml
+/build
+/.phpunit.result.cache
+/.php_cs.cache

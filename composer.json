@@ -12,15 +12,15 @@
     {
         "name": "Yuki Matsukura",
         "email": "matsubokkuri@gmail.com",
-        "homepage": "http://matsu.teraren.com/blog/"
+        "homepage": "https://matsu.teraren.com/"
     }
     ],
     "require-dev": {
         "devster/ubench": "dev-master",
-        "phpunit/phpunit": "3.7.*@stable",
-        "satooshi/php-coveralls": "dev-master",
-        "fabpot/php-cs-fixer": "0.3.*@dev",
-        "sebastian/diff": "1.0.*@dev"
+        "phpunit/phpunit": "^9",
+        "php-coveralls/php-coveralls": "^2.4",
+        "friendsofphp/php-cs-fixer": "^2.16",
+        "phpunit/php-code-coverage": "^9.2"
     },
     "autoload": {
         "psr-0": {"Matsubo": "src/"}
