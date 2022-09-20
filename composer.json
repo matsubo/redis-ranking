@@ -18,7 +18,7 @@
     "require-dev": {
         "devster/ubench": "dev-master",
         "phpunit/phpunit": "^9",
-        "php-coveralls/php-coveralls": "^2.4",
+        "php-coveralls/php-coveralls": "^2.5",
         "friendsofphp/php-cs-fixer": "^3",
         "phpunit/php-code-coverage": "^9.2"
     },
