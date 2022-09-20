@@ -1,4 +1,5 @@
 <?php
+
 namespace Matsubo\Redis;
 
 /**
@@ -10,9 +11,9 @@ namespace Matsubo\Redis;
 class Ranking
 {
     /** @const result status of ok */
-    const STATUS_OK = 1;
+    public const STATUS_OK = 1;
     /** @const result status of failure */
-    const STATUS_FAILURE = 0;
+    public const STATUS_FAILURE = 0;
 
     /** @var mixed Redis instance */
     private $redis;
