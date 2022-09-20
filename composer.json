@@ -4,7 +4,7 @@
     "keywords": ["redis", "ranking", "sorted set", "realtime", "Social Game"],
     "homepage": "https://github.com/matsubo/redis-ranking",
     "type": "library",
-    "license": "PHP3",
+    "license": "PHP-3.01",
     "require" : {
         "php": ">=7,>=8"
     },
