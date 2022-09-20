@@ -14,7 +14,7 @@ Requirements
 - PhpRedis extension
   - https://github.com/nicolasff/phpredis
 - PHP
-  - `>=5.5 >=5.6, >=7.0`
+  - `>=7,>=8`
 - Composer
 
 
@@ -68,6 +68,9 @@ TODO
 
 History
 ----------------------------
+- 1.3.0
+  - Updated libraries
+  - Added PHP 8 Support and omit PHP 5 support.
 - 1.2.0
   - Updated dev tools
 - 1.1.0
