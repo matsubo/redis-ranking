@@ -1,28 +1,44 @@
 {
     "name": "redis/ranking",
     "description": "Wrapping Redis's sorted set APIs for specializing ranking operations.",
-    "keywords": ["redis", "ranking", "sorted set", "realtime", "Social Game"],
+    "keywords": ["redis", "ranking", "sorted set", "leaderboard", "realtime", "Social Game"],
     "homepage": "https://github.com/matsubo/redis-ranking",
     "type": "library",
     "license": "PHP-3.01",
-    "require" : {
-        "php": ">=7,>=8"
-    },
     "authors": [
-    {
-        "name": "Yuki Matsukura",
-        "email": "matsubokkuri@gmail.com",
-        "homepage": "https://matsu.teraren.com/"
-    }
+        {
+            "name": "Yuki Matsukura",
+            "email": "matsubokkuri@gmail.com",
+            "homepage": "https://matsu.teraren.com/"
+        }
     ],
+    "require": {
+        "php": "^8.3",
+        "ext-redis": "^6.0"
+    },
     "require-dev": {
-        "devster/ubench": "dev-master",
-        "phpunit/phpunit": "^9",
-        "php-coveralls/php-coveralls": "^2.5",
-        "friendsofphp/php-cs-fixer": "^3",
-        "phpunit/php-code-coverage": "^9"
+        "friendsofphp/php-cs-fixer": "^3.95",
+        "phpstan/phpstan": "^2.3",
+        "phpunit/phpunit": "^12.5 || ^13.4"
     },
     "autoload": {
-        "psr-0": {"Matsubo": "src/"}
+        "psr-4": {
+            "Matsubo\\Redis\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Matsubo\\Redis\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "fix": "php-cs-fixer fix",
+        "lint": "php-cs-fixer check --diff",
+        "stan": "phpstan analyse --memory-limit=512M",
+        "test": "phpunit",
+        "check": ["@lint", "@stan", "@test"]
     }
 }

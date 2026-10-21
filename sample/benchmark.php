@@ -1,72 +1,32 @@
 <?php
-require __DIR__ . '/../vendor/autoload.php';
+
+declare(strict_types=1);
+
+// php sample/benchmark.php  (needs Redis on REDIS_HOST, default 127.0.0.1)
 
 use Matsubo\Redis\Ranking;
 
+require __DIR__ . '/../vendor/autoload.php';
 
-$redis = new \Redis();
-$redis->connect('127.0.0.1', 6379);
+$redis = new Redis();
+$redis->connect(getenv('REDIS_HOST') ?: '127.0.0.1', 6379);
 
-$key = 'benchmark';
+$ranking = new Ranking('benchmark', $redis);
+$users = 50_000;
 
-$ranking = new Ranking($key, $redis);
+/** @param Closure(int): mixed $operation */
+$bench = static function (string $label, Closure $operation) use ($users): void {
+    $start = hrtime(true);
+    for ($i = 0; $i < $users; ++$i) {
+        $operation($i);
+    }
+    $seconds = (hrtime(true) - $start) / 1e9;
+    printf("%-10s %s queries/s\n", $label . ':', number_format($users / $seconds));
+};
 
-$users = 50000;
+$bench('Add', static fn(int $i): bool => $ranking->setUserScore($i, -mt_rand(1, 10_000)));
+$bench('Update', static fn(int $i): bool => $ranking->setUserScore($i, -mt_rand(1, 10_000)));
+$bench('Get score', static fn(int $i): ?float => $ranking->getScore($i));
+$bench('Get rank', static fn(int $i): ?int => $ranking->getRank($i));
 
-
-// add
-$bench = new Ubench;
-$bench->start();
-for ($i = 0; $i < $users; $i++ ) {
-    $result = $ranking->setUserScore($i, -mt_rand(1, 10000));
-}
-$bench->end();
-
-echo sprintf("Add: %s queries/s\n" , number_format(round($users / ($bench->getTime(true)))));
-
-
-
-// update(overwrite)
-$bench = new Ubench;
-$bench->start();
-for ($i = 0; $i < $users; $i++ ) {
-    $result = $ranking->setUserScore($i, -mt_rand(1, 10000));
-}
-$bench->end();
-echo sprintf("Update: %s queries/s\n" , number_format(round($users / ($bench->getTime(true)))));
-
-
-// get score
-$bench = new Ubench;
-$bench->start();
-for ($i = 0; $i < $users; $i++ ) {
-    $ranking->getScore($i);
-}
-$bench->end();
-echo sprintf("Get score: %s queries/s\n" , number_format(round($users / ($bench->getTime(true)))));
-
-
-// get rank
-$bench = new Ubench;
-$bench->start();
-for ($i = 0; $i < $users; $i++ ) {
-    $ranking->getRank($i);
-}
-$bench->end();
-echo sprintf("Get rank: %s queries/s\n" , number_format(round($users / ($bench->getTime(true)))));
-
-
-
-
-
-
-
-
-// show top 10
-// print_r($ranking->getRange(0, 10, true));
-
-// cleanup
-$redis->del($key);
-
-
-
+$ranking->deleteAllUser();

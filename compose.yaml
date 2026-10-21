@@ -1,0 +1,47 @@
+# Tests need a Redis server; everything runs in containers.
+#
+#   docker compose run --rm php check         # php-cs-fixer check, PHPStan, PHPUnit on PHP 8.3
+#   docker compose run --rm php fix           # apply php-cs-fixer
+#   docker compose run --rm php84 test        # PHPUnit on PHP 8.4
+#   docker compose run --rm php85 test        # PHPUnit on PHP 8.5
+#
+# `php` is the oldest supported PHP, so the formatter cannot introduce newer
+# syntax. Each service has its own vendor volume and resolves dependencies for
+# its own PHP version (composer.lock is not committed: this is a library).
+
+x-php: &php
+  working_dir: /app
+  entrypoint: ["sh", "-c", "[ -f vendor/autoload.php ] || composer update -q --no-progress; exec composer \"$@\"", "--"]
+  environment:
+    REDIS_HOST: redis
+  depends_on:
+    redis:
+      condition: service_healthy
+
+services:
+  redis:
+    image: redis:8-alpine
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 2s
+      retries: 10
+
+  php:
+    <<: *php
+    build: { context: ., args: { PHP_VERSION: "8.3" } }
+    volumes: [".:/app", "vendor83:/app/vendor"]
+
+  php84:
+    <<: *php
+    build: { context: ., args: { PHP_VERSION: "8.4" } }
+    volumes: [".:/app", "vendor84:/app/vendor"]
+
+  php85:
+    <<: *php
+    build: { context: ., args: { PHP_VERSION: "8.5" } }
+    volumes: [".:/app", "vendor85:/app/vendor"]
+
+volumes:
+  vendor83:
+  vendor84:
+  vendor85:
