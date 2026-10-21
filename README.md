@@ -106,6 +106,8 @@ docker compose run --rm php85 test   # PHPUnit on PHP 8.5
 
 History
 -------
+- 2.0.1
+  - License unified to Apache-2.0 (`composer.json`, README; the CC0 `LICENSE.md` is removed).
 - 2.0.0
   - PHP 8.3+ and phpredis 6: native types, `strict_types`, `final readonly` class, PSR-4.
   - Fixed `countUsers()`, `deleteUser()` and `deleteAllUser()` on phpredis 6, and the
@@ -134,7 +136,7 @@ History
 
 License
 -------
-It is released under the [PHP License, version 3.01](http://www.php.net/license/3_01.txt).
+Released under the [Apache License, Version 2.0](LICENSE).
 
 
 Copyright

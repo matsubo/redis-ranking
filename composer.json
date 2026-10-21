@@ -4,7 +4,7 @@
     "keywords": ["redis", "ranking", "sorted set", "leaderboard", "realtime", "Social Game"],
     "homepage": "https://github.com/matsubo/redis-ranking",
     "type": "library",
-    "license": "PHP-3.01",
+    "license": "Apache-2.0",
     "authors": [
         {
             "name": "Yuki Matsukura",
